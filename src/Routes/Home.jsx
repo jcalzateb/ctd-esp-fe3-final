@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Card from "../Components/Card";
-import axios from "axios";
+import { useCharStates } from "../Context/Context";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
+  const { state } = useCharStates();
   return (
-    <main className="">
+    <main className={`container ${state.theme}`}>
       <h1>Home</h1>
       <div className="card-grid">
-        {chars.map((char) => (
+        {state.data.map((char) => (
           <Card key={char.id} char={char} />
         ))}
         {/* Aqui deberias renderizar las cards */}

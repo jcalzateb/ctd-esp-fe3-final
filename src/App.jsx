@@ -11,16 +11,14 @@ import Layout from "./Layout/Layout";
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/contacto" element={<Contact />} />
-          <Route path="/dentist/:id" element={<Detail />} />
+          <Route path="/detail/:id" element={<Detail />} />
           <Route path="/favs" element={<Favs />} />
         </Route>
       </Routes>
-      <Footer />
     </div>
   );
 }
