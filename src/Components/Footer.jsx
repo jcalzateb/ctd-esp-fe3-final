@@ -1,9 +1,9 @@
 import React from "react";
 import "../Styles/Footer.css";
-import { useCharStates } from "../Context/Context";
+import { useDentistStates } from "../Context/Context";
 
 const Footer = () => {
-  const { state } = useCharStates();
+  const { state } = useDentistStates();
 
   return (
     <footer className={`footer ${state.theme}`}>

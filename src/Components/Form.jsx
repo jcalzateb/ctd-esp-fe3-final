@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const Form = () => {
-  //Aqui deberan implementar el form completo con sus validaciones
   const [form, setForm] = useState({ name: "", email: "" });
   const [mostrar, setMostrar] = useState(false);
   const [error, setError] = useState(false);

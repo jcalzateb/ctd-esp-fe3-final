@@ -1,20 +1,17 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useCharStates } from "../Context/Context";
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import { useDentistStates } from "../Context/Context";
 
 const Detail = () => {
-  const [char, setChar] = useState({});
+  const [dentist, setdentist] = useState({});
   const params = useParams();
-  const { state } = useCharStates();
-  // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
+  const { state } = useDentistStates();
   const url = "https://jsonplaceholder.typicode.com/users/" + params.id;
   useEffect(() => {
     try {
       axios(url).then((res) => {
-        setChar(res.data);
+        setdentist(res.data);
       });
     } catch (error) {
       console.error("Error fetching user data:", error);
@@ -25,12 +22,10 @@ const Detail = () => {
     <>
       <div className={`container ${state.theme}`}>
         <h1>Detail Dentist</h1>
-        <h2>{char.name}</h2>
-        <p>Email: {char.email}</p>
-        <p>Phone: {char.phone}</p>
-        <p>Website: {char.website}</p>
-        {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-        {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
+        <h2>{dentist.name}</h2>
+        <p>Email: {dentist.email}</p>
+        <p>Phone: {dentist.phone}</p>
+        <p>Website: {dentist.website}</p>
       </div>
     </>
   );

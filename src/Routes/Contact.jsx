@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
 import Form from "../Components/Form";
-import { useCharStates } from "../Context/Context";
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import { useDentistStates } from "../Context/Context";
 
 const Contact = () => {
-  const { state } = useCharStates();
+  const { state } = useDentistStates();
   return (
     <div className={`container ${state.theme}`}>
       <h1>Want to know more?</h1>

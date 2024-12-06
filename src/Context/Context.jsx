@@ -8,7 +8,7 @@ import {
 import axios from "axios";
 import { reducer } from "../Reducer/Reducer";
 
-const CharStates = createContext();
+const DentistStates = createContext();
 
 export const initialState = {
   theme: "light",
@@ -31,12 +31,12 @@ const Context = ({ children }) => {
   }, []);
 
   return (
-    <CharStates.Provider value={{ state, dispatch }}>
+    <DentistStates.Provider value={{ state, dispatch }}>
       {children}
-    </CharStates.Provider>
+    </DentistStates.Provider>
   );
 };
 
 export default Context;
 
-export const useCharStates = () => useContext(CharStates);
+export const useDentistStates = () => useContext(DentistStates);
