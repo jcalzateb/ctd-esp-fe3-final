@@ -6,6 +6,7 @@ import {
   useState,
 } from "react";
 import axios from "axios";
+import { reducer } from "../Reducer/Reducer";
 
 const CharStates = createContext();
 
@@ -15,25 +16,13 @@ export const initialState = {
   favs: JSON.parse(localStorage.getItem("favs")) || [],
 };
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "TOGGLE_THEME":
-      return { ...state, theme: state.theme === "light" ? "dark" : "light" };
-    case "SET_DATA":
-      return { ...state, data: action.payload };
-    case "ADD_FAV": {
-      const updatedFavs = [...state.favs, action.payload];
-      localStorage.setItem("favs", JSON.stringify(updatedFavs));
-      return { ...state, favs: updatedFavs };
-    }
-    default:
-      return state;
-  }
-};
-
 const Context = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const url = "https://jsonplaceholder.typicode.com/users";
+
+  useEffect(() => {
+    localStorage.setItem("favs", JSON.stringify(state.favs));
+  }, [state.favs]);
 
   useEffect(() => {
     axios(url).then((res) => {

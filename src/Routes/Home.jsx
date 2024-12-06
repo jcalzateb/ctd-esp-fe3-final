@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import Card from "../Components/Card";
 import { useCharStates } from "../Context/Context";
+import "../Styles/App.css";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 

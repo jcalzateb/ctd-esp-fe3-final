@@ -42,7 +42,7 @@ const Form = () => {
       )}
       {mostrar && (
         <p style={{ color: "green" }}>
-          Gracias, {form.name}! Nos comunicaremos en el siguiente correo{" "}
+          Gracias, {form.name}! Nos comunicaremos al siguiente correo{" "}
           {form.email}.
         </p>
       )}

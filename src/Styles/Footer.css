@@ -1,0 +1,44 @@
+.footer {
+  padding: 1rem;
+  background-color: white;
+  border-top: 40px solid #6b3e3e;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Espaciado entre los elementos */
+}
+
+.footer img {
+  width: 200px;
+}
+
+.footer-by {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espaciado entre "Powered by" y DH.png */
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-icons img {
+  width: 25px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  background-color: #444;
+  border: white;
+  border-radius: 50%;
+}
+.footer-icons img:hover {
+  transform: scale(1.2);
+}
+
+.footer.dark {
+  background-color: #444;
+}

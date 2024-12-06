@@ -8,7 +8,7 @@ const Contact = () => {
   const { state } = useCharStates();
   return (
     <div className={`container ${state.theme}`}>
-      <h2>Want to know more?</h2>
+      <h1>Want to know more?</h1>
       <p>Send us your questions and we will contact you</p>
       <Form />
     </div>

@@ -7,6 +7,7 @@ import Contact from "./Routes/Contact";
 import Detail from "./Routes/Detail";
 import Favs from "./Routes/Favs";
 import Layout from "./Layout/Layout";
+import "./styles/App.css";
 
 function App() {
   return (
