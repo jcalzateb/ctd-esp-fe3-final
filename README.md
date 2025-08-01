@@ -1,8 +1,36 @@
-# React + Vite
+# 🦷 DH Odonto — App de Gestión de Dentistas
 
-DH Odonto
-Esta es una aplicación creada con React y Vite, diseñada para gestionar información sobre dentistas. Permite consultar detalles de cada dentista, agregar favoritos, cambiar entre los temas claro y oscuro, etc...
+![alt text](image.png)
 
-Enlace de la Aplicación
-La aplicación está desplegada en Netlify y puedes acceder a ella aquí:
-# https://6752b57e6570a5f9993a250d--vermillion-axolotl-a31921.netlify.app/
+DH Odonto es una aplicación moderna desarrollada con **React** y **Vite**, pensada para gestionar información sobre dentistas de forma intuitiva. La app permite a los usuarios consultar detalles, agregar favoritos y personalizar la interfaz con temas claro y oscuro.
+
+---
+
+## 🚀 Tecnologías Utilizadas
+
+- ⚛️ **React** — Librería para construir interfaces de usuario.
+- ⚡ **Vite** — Empaquetador ultrarrápido para desarrollo frontend.
+- 💅 **CSS Modules** o Styled Components — Estilos personalizados.
+- 🌙 **Modo Dark/Light** — Alternancia entre temas.
+- 📦 **Context API** — Para la gestión del estado global.
+- 💖 **LocalStorage** — Persistencia de favoritos.
+
+---
+
+## 🧠 Características Principales
+
+- 🔍 **Listado y búsqueda de dentistas**.
+- 📋 **Detalle individual de cada dentista**.
+- ⭐ **Agregar y eliminar favoritos**.
+- 🌗 **Switch para cambiar entre modo claro y oscuro**.
+- 📱 **Diseño responsivo**.
+
+---
+
+## 🔧 Instalación y Ejecución
+
+```bash
+git clone https://github.com/tu-usuario/dh-odonto.git
+cd dh-odonto
+npm install
+npm run dev
